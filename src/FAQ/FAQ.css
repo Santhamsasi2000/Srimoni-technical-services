@@ -1,0 +1,17 @@
+.expand-icon
+{
+    color:  #361b14;
+    font-size: 25px;
+    font-weight: 900;
+    transition: transform 0.3s ease-in-out;
+}
+
+.expand-icon.active
+{
+    transform: rotate(180deg);
+}
+
+.horizontal-border
+{
+    border: 1px solid #361b14;
+}

@@ -1,0 +1,18 @@
+.testimonial-title
+{
+    font-size: 35px; 
+    font-weight: 900;
+    text-align: center;
+}
+
+.testimonial-img
+{
+    height: 50px;
+    width: 50px;
+}
+
+.testimonial-bg
+{
+    background-color: #c67949;
+    color: white;
+}

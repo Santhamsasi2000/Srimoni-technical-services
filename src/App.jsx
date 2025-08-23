@@ -1,32 +1,31 @@
-import './App.css'
+import './App.css';
+// Blur Image
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { Route, Routes } from 'react-router-dom';
+import Home from './Home/Home';
+import ScrollToTop from './Components/ScrollToTop';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer/Footer';
+import Services from './Services/Services';
+import About from './About/About';
+import FAQ from './FAQ/FAQ';
+import ContactUs from './ContactUs/ContactUs';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <ScrollToTop/>
+     <NavBar/>
+     <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/faq' element={<FAQ/>}/>
+        <Route path='/contact' element={<ContactUs/>}/>
+     </Routes>
+     <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
