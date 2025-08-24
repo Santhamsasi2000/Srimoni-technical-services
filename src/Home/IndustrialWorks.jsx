@@ -55,7 +55,6 @@ const myWorks = [
   { id: 8, img: "/Images/Home/Works/8.webp" },
   { id: 9, img: "/Images/Home/Works/9.webp" },
   { id: 10, img: "/Images/Home/Works/10.webp" },
-  { id: 11, img: "/Images/Home/Works/11.webp" },
   { id: 12, img: "/Images/Home/Works/12.webp" },
   { id: 13, img: "/Images/Home/Works/13.webp" },
   { id: 14, img: "/Images/Home/Works/14.webp" },
@@ -63,8 +62,6 @@ const myWorks = [
   { id: 16, img: "/Images/Home/Works/16.webp" },
   { id: 17, img: "/Images/Home/Works/17.webp" },
   { id: 18, img: "/Images/Home/Works/18.webp" },
-  { id: 19, img: "/Images/Home/Works/19.webp" },
-  { id: 20, img: "/Images/Home/Works/20.webp" },
   { id: 21, img: "/Images/Home/Works/21.webp" },
   { id: 22, img: "/Images/Home/Works/22.webp" },
 ];
