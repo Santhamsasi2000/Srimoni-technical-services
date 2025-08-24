@@ -60,7 +60,7 @@ const ContactUsForm = () => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <h2 className="text-teal-800 text-2xl font-bold mb-3">{title}</h2>
+            <h2 className="text-teal-800 text-xl sm:text-2xl font-bold mb-3">{title}</h2>
             <p className="mb-5">{subTitle}</p>
 
             <FormField name="name" label="Name" placeholder="Your Name *" />

@@ -18,11 +18,11 @@ const FooterContact = () => {
       </div>
       <div className="mb-3 flex gap-3 items-center">
           <i className="text-xl text-plum-600"><IoIosMail /></i>
-          <a href={`mailto:${email}`}>{email}</a>
+          <a href={`mailto:${email}`} className="hover:underline hover:text-teal-800">{email}</a>
       </div>
       <div className="flex gap-3 items-center">
-          <i className="text-xl text-plum-600"><FaMobileAlt /></i>
-          <a href={`tel:${mobile1}`}>{mobile1}</a>
+          <i className="text-xl text-plum-600 "><FaMobileAlt /></i>
+          <a href={`tel:${mobile1}`} className="hover:underline hover:text-teal-800">{mobile1}</a>
       </div>
     </div>
   )

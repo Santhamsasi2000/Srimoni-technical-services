@@ -1,26 +1,32 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { label } from "framer-motion/client";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { FaXTwitter } from "react-icons/fa6";
 
 const socialMedia = [
   {
     id: 1,
-    link: "https://api.whatsapp.com/send?phone=6384379814",
+    link: "https://api.whatsapp.com/send?phone=971542458604",
     icon: <SiWhatsapp />,
     label: "Connect on Whatsapp",
   },
   {
     id: 2,
-    link: "https://www.linkedin.com/in/sasikumarthefreelancer/",
-    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/srikanth-murugan-b2070a369/",
+    icon: <FaLinkedinIn />,
     label: "Connect on LinkedIn",
   },
   {
     id: 3,
-    link: "https://www.instagram.com/pogowebsolutions/?hl=en",
+    link: "https://www.instagram.com/mr_dubai_tamil",
     icon: <FaInstagram />,
+    label: "Follow on Instagram",
+  },
+  {
+    id: 3,
+    link: "https://x.com/srimonitech?s=21",
+    icon: <FaXTwitter />,
     label: "Follow on Instagram",
   },
 ];
@@ -39,7 +45,7 @@ const SocialMedia = () => {
       {
         socialMedia.map(({ id, link, icon })=>(
         <div className='flex gap-4' key={id}>
-            <a className='bg-plum-600 text-white p-3 rounded-full' href={link} 
+            <a className='bg-plum-600 text-white p-3 rounded-full hover:bg-plum-500' href={link} 
             target='_blank'  rel="noopener noreferrer" aria-label={label}>{icon}</a>
         </div>
         ))

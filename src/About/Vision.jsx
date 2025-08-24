@@ -27,7 +27,7 @@ const DataVision = [
         id: 1,
         icon: <FaBullseye/>,
         title: "Our Mission",
-        content: "At SriMoni Tech, our mission is to deliver reliable, efficient, and sustainable technical solutions in HVAC, electrical fittings, and maintenance services. We are committed to ensuring customer satisfaction through quality workmanship, innovative practices, and timely support—building lasting relationships based on trust and professionalism.",
+        content: "At Srimoni Tech, our mission is to deliver reliable, efficient, and sustainable technical solutions in HVAC, electrical fittings, and maintenance services. We are committed to ensuring customer satisfaction through quality workmanship, innovative practices, and timely support—building lasting relationships based on trust and professionalism.",
     },
     {
         id: 2,

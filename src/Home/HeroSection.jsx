@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="flex gap-2">
             <NavLink to="/about"
             className="bg-plum-600 text-white rounded-4xl px-4 py-2 xs:px-6 xs:py-2 text-sm sm:text-base">
-              About Sri Monitech
+              About Srimoni tech
             </NavLink>
             <NavLink to="/contact"
              className="bg-white rounded-4xl px-4 py-2 xs:px-6 xs:py-2 text-sm sm:text-base">

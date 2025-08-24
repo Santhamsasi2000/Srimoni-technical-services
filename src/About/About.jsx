@@ -18,7 +18,7 @@ const About = () => {
         
         <Vision/>
 
-        {/* <OurTeam/> */}
+        <OurTeam/>
       </section>
     );
   };
