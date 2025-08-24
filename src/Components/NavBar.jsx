@@ -21,6 +21,7 @@ const NavBar = () => {
         setScrolled(false);
       }
     }
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
    }, []);
@@ -63,7 +64,7 @@ const NavBar = () => {
             <LazyLoadImage src="/Images/Home/changed-logo.jpg" 
             className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px]"/>
             <motion.h1 
-            className="text-plum-800 text-2xl sm:text-[28px] font-bold mb-0"
+            className="text-plum-800 text-2xl sm:text-[28px] font-bold mb-0 font-nunito"
             whileHover={{scale: 1.05}}
             transition={{ type: "spring", stiffness: 300 }}
             >
