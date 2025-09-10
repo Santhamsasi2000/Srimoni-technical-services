@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from "react";
 import { Formik, Form } from "formik";
 import { ValidationSchema } from "./ValidationSchema";
 import FormField from "./FormField";
+import { FaArrowRight } from "react-icons/fa"
+import { motion } from "framer-motion";
 
 const Swal = lazy(() => import("sweetalert2"));
 const title = "Get In Touch";
@@ -45,7 +47,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <section className="max-w-[500px] flex justify-end w-full">
+    <motion.section>
       <Formik
         initialValues={{
           name: "",
@@ -59,9 +61,9 @@ const ContactUsForm = () => {
         onSubmit={onSubmit}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <h2 className="text-teal-800 text-xl sm:text-2xl font-bold mb-3">{title}</h2>
-            <p className="mb-5">{subTitle}</p>
+          <Form >
+            <h2 className="text-teal-800 text-xl sm:text-2xl font-bold mb-3 lg:mb-5">{title}</h2>
+            <p className="mb-5 text-gray-600 text-sm xs:text-base">{subTitle}</p>
 
             <FormField name="name" label="Name" placeholder="Your Name *" />
             <FormField name="email" label="Email Address (Optional)" type="email" placeholder="Enter Your Email Id" />
@@ -72,15 +74,17 @@ const ContactUsForm = () => {
 
             <button
               type="submit"
-              className="bg-plum-600 text-white w-full py-2 rounded-xl"
+              className="bg-plum-600 text-white font-bold w-full rounded-4xl py-2 shadow-lg
+              hover:bg-plum-500 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out
+              active:scale-95 active:bg-plum-700 flex items-center gap-1 justify-center"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "SENDING..." : "SEND"}
+              {isSubmitting ? "SENDING..." : "SEND"} <FaArrowRight/>
             </button>
           </Form>
         )}
       </Formik>
-    </section>
+    </motion.section>
   );
 };
 

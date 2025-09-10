@@ -7,7 +7,7 @@ const FAQ = () => {
   const [activeId, setActiveId] = useState(null);
 
   return (
-     <section className="mt-15 sm:mt-18 p-4 sm:p-5 md:p-6">
+     <section className="mt-15 sm:mt-18 p-4 sm:p-5 md:px-10">
        <h2 
         className='text-center text-plum-800 text-2xl sm:text-3xl font-bold mb-5 md:mb-6 mt-3'>
         Frequently Asked Questions

@@ -9,8 +9,9 @@ const FormField = ({ label, name, type = "text", as = "input", ...props }) => (
       id={name}
       name={name}
       type={type}
-      className={`p-2 mt-2 rounded border-1 border-gray-400
-        ${type === "textarea" ? "pt-3" : ""}`}
+      className={`p-2 mt-2 rounded border-1 border-gray-400 
+        outline-0 focus:ring-2 focus:ring-teal-400
+        ${type === "textarea" ? "pt-3" : ""}`} 
       as={as}
       {...props}
     />

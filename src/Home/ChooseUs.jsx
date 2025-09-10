@@ -1,4 +1,5 @@
 import { FaClock, FaHeart, FaTools, FaUserTie } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const points = [
     {
@@ -33,11 +34,30 @@ const title = "Why Choose Srimonitech?";
 const ChooseUs = () => { 
   return (
     <section className='mt-10 p-4 sm:p-5 md:p-6'>
-       <h2 className='text-center text-plum-800 text-2xl sm:text-3xl font-bold mb-5'>{title}</h2>
+
+       {/* Title */}
+       <motion.h2 
+        className='text-center text-plum-800 text-2xl sm:text-3xl font-bold mb-5'
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+       >
+        {title}
+       </motion.h2>
+
+       {/*  */}
        <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-7'>
           {
-           points.map(({ id, Icon, title, desc })=>(
-                 <div className='' key={id}>
+           points.map(({ id, Icon, title, desc }, index)=>(
+                 <motion.div 
+                    className='' 
+                    key={id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 , ease: "easeOut"}}
+                 >
                     <div className="flex flex-col items-center h-full shadow-2xl rounded-2xl p-4 sm:p-3 xl:p-4 bg-teal-100">
                         <div className="w-15 h-15 bg-plum-600 flex items-center justify-center rounded-full mb-3">
                             <Icon className="text-white text-xl"/>
@@ -45,7 +65,7 @@ const ChooseUs = () => {
                         <h5 className='mb-1 font-bold'>{title}</h5>
                         <p className='text-center'>{desc}</p>
                     </div>
-                 </div>
+                 </motion.div>
   
            ))
           }

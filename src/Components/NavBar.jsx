@@ -46,12 +46,13 @@ const NavBar = () => {
       visible: { x: 0, opacity: 1 , transition: { duration:1, ease: "easeOut" }},
       exit: { x: 80, opacity: 0 , transition: { duration: 1, ease: "easeIn" }}
     };
+
   return (
     <motion.nav 
       className={`px-3 py-1 sm:px-4 sm:py-2
-      transition-colors duration-300 ease-in-out fixed left-0 right-0 top-0 z-50 shadow-md
-      ${scrolled ? "bg-white shadow-md"
-         : "bg-white"}
+      transition-colors duration-300 ease-in-out fixed left-0 right-0 top-0 z-50
+      ${scrolled ? "bg-white"
+         : "bg-white shadow-plum-50"}
          `}
       initial="hidden"
       animate="visible"
@@ -60,7 +61,10 @@ const NavBar = () => {
        <div className="flex items-center justify-between">
         {/* Brand */}
         <NavLink to="/" className="">
-          <div className="flex items-center gap-2 mb-1">
+          <motion.div 
+           className="flex items-center gap-2 mb-1"
+           animate={{ scale: scrolled ? 0.9 : 1 }}
+           transition={{ duration: 0.3 }}>
             <LazyLoadImage src="/Images/Home/changed-logo.jpg" 
             className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px]"/>
             <motion.h1 
@@ -70,7 +74,7 @@ const NavBar = () => {
             >
               SRIMONI
             </motion.h1>
-           </div>
+           </motion.div>
             <p>Technical Services LLC</p>
         </NavLink>
         
@@ -110,7 +114,12 @@ const NavBar = () => {
           <a href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-plum-600 px-4 py-2 text-white flex items-center gap-1 font-bold rounded-4xl">
+          className="flex items-center gap-1
+          rounded-4xl px-5 py-2 bg-plum-600 font-semibold text-white shadow-lg
+          hover:bg-plum-500
+          hover:scale-105 hover:shadow-2xl
+          active:scale-95
+           transition-colors duration-300 ease-in-out">
             <FaWhatsapp className="text-xl"/> Whatsapp
           </a>
         </ul>

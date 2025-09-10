@@ -1,6 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component"
-import { NavLink } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 // Carousel
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -12,7 +12,13 @@ const smallDesc = "Take a closer look at our HVAC installations — engineered t
 
 const IndustrialWorks = () => {
   return (
-    <section className="p-4 sm:p-5 md:p-6 mt-10">
+    <motion.section 
+      className="p-4 sm:p-5 md:p-6 mt-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut"}}
+    >
        <h2 
         className='text-center text-plum-800 text-2xl sm:text-3xl font-bold mb-2'>
         {title}
@@ -20,27 +26,33 @@ const IndustrialWorks = () => {
        <p className='mb-5 sm:mb-6 text-center text-sm sm:text-base'>{smallDesc}</p>
 
        {/* Auto Carousel */}
-       <Swiper
-	        modules={[Autoplay]}
-	        autoplay={{ delay: 1000, disableOnInteraction: false }}
-	        spaceBetween={30}
-	        slidesPerView={1}
-	        breakpoints={{
-	          400: { slidesPerView: 2 }, 
-            900: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 }, 
-	        }}
-	        loop={true}
-	      >
-        {myWorks.map(({ id, img }) => (
-          <SwiperSlide key={id}>
-            <div className="flex justify-center">
-              <LazyLoadImage src={img} className="w-full rounded-lg aspect-[1/1]" effect="blur" threshold={200}/>
-            </div>
-          </SwiperSlide>
-        ))}
-       </Swiper>
-    </section>
+       <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, delay: 0.3 }}>
+        <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              400: { slidesPerView: 2 }, 
+              900: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 }, 
+            }}
+            loop={true}
+          >
+          {myWorks.map(({ id, img }) => (
+            <SwiperSlide key={id}>
+              <div className="flex justify-center">
+                <LazyLoadImage src={img} className="w-full rounded-lg aspect-[1/1]" effect="blur" threshold={200}/>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+       </motion.div>
+    </motion.section>
   )
 }
 
