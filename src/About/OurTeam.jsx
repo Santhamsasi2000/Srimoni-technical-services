@@ -9,7 +9,7 @@ const OurTeam = () => {
            teamMembers.map(({ id, img, name, position })=>(
             <div className="" key={id}>
                <div className="shadow d-flex flex-column align-items-center">
-                 <LazyLoadImage src={img} className="director-img mb-2 w-80 h-80"/>
+                 <LazyLoadImage src={img} className="mb-2 w-80 h-auto aspect-[4/3]"/>
                  <div className="bg-teal-100 p-3">
                   <h4 className="fw-bold fs-5 text-center text-teal-800 font-bold">{name}</h4>
                   <p className="fw-bold fs-5 text-center">{position}</p>
@@ -28,7 +28,7 @@ export default OurTeam
 const teamMembers = [
   {
     id: 1,
-    img: "/Images/About/srikanth-founder-1.jpg",
+    img: "/Images/About/srikanth-founder.jpg",
     name: "Srikanth Murugan",
     position: "Founder & CEO",
   },
