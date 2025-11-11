@@ -11,8 +11,8 @@ import OurTeam from './About/OurTeam.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      {/* <App/> */}
-      <OurTeam/>
+      <App/>
+      {/* <OurTeam/> */}
     </BrowserRouter>
   </StrictMode>,
 )
